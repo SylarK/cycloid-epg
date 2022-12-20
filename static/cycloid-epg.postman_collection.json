@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "9d8ae3f0-ab5c-4b2f-85c1-2c64124c1b69",
+		"name": "cycloid-epg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23977163"
+	},
+	"item": [
+		{
+			"name": "Channel",
+			"item": [
+				{
+					"name": "Create Channel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Cycloid Epg\",\r\n    \"position\": 1, \r\n    \"category\": \"Education\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/api/channels/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"channels",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Channels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/api/channels",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"channels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Channel By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/channels/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"channels",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Program",
+			"item": [
+				{
+					"name": "Create Program",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"channelId\": 1,\r\n    \"imageUrl\": \"https://cdn.mos.cms.futurecdn.net/tEzeTYPgYPvEeLznZNwR9o.jpg\", \r\n    \"title\": \"Sky Sports Program\",\r\n    \"description\":\"The Sky Sports 2022 presenters, pundits and commentators features an all-star cast of former stars\",\r\n    \"startTime\": \"15-12-2022 11:00:00\", \r\n    \"endTime\": \"15-12-2022 12:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/api/programs/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"programs",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/api/programs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"programs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Program By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/api/programs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"programs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Program",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"channelId\": 1,\r\n    \"imageUrl\": \"https://cdn.mos.cms.futurecdn.net/tEzeTYPgYPvEeLznZNwR9o.jpg\", \r\n    \"title\": \"Sky Sports Program - Testing\",\r\n    \"description\":\"The Sky Sports 2022 presenters, pundits and commentators features an all-star cast of former stars\",\r\n    \"startTime\": \"15-12-2022 11:00:00\", \r\n    \"endTime\": \"15-12-2022 12:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/api/programs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"programs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Programs In Channel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/api/programs/channel/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"programs",
+								"channel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Check status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/api",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
