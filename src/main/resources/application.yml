@@ -1,0 +1,18 @@
+server:
+  port: 8085
+  error:
+    include-stacktrace: never
+spring:
+  datasource:
+    url: jdbc:h2:mem:cycloid-db
+    username: cycloid
+    password: cycloid
+    driverClassName: org.h2.Driver
+  h2:
+    console.enabled: true
+    path: /h2-console
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  mvc:
+    format:
+      date-time: dd-MM-yyyy HH:mm:ss
