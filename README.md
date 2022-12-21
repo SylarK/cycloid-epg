@@ -1,6 +1,12 @@
 # Cycloid EPG
 
-## General description
+- [General Description](#general_description)
+- [Models](#models)
+- [Usage](#usage)
+- [Endpoints](#endpoints)
+- [Unit Tests](#unit_tests)
+
+## <a name="general_description">General description</a>
 This project was developed as a RESTful API in Java, using Springboot as framework
 to provide EPG information.
 
@@ -10,14 +16,14 @@ in the h2 database.
 The hateoas was used to improve the user experience, everything was developed with the objective
 to facilitate frontend integration and navigation between/across the endpoints.
 
-## Models
+## <a name="models">Models</a>
 
 ![models_cycloid_epg.png](/static/img_1.png)
 
 - The relationship between Channel and Program is **one to many**, a Channel can have many Programs, and Many Programs
 can be associated with only one Channel.
 
-## Usage
+## <a name="usage">Usage</a>
 
 ### Back-end - Java Spring Boot
 On the main folder (cycloid-epg):
@@ -28,7 +34,7 @@ mvn spring-boot:run
 
 - It is possible just run directly on bash, or you can import the project as existing sources based on maven.
 
-## Endpoints
+## <a name="endpoints">Endpoints</a>
 
 - There is a file called [cycloid-epg.postman_collection.json](/static/cycloid-epg.postman_collection.json) inside the 'static' folder, 
 it is a collection created to help you test each endpoint.
@@ -96,7 +102,7 @@ it is a collection created to help you test each endpoint.
         curl --location --request GET 'localhost:8085/api/programs/channel/1'
       ```
 
-## Unit tests
+## <a name="unit_tests">Unit tests</a>
 On the main folder (cycloid-epg):
 ```bash
 mvn test
